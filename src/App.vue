@@ -27,7 +27,7 @@
   </div>
 </template>
 
-<script >
+<script lang="ts">
 import axios from 'axios'
 import { VUE_APP_API_TOKEN, VUE_APP_TOKEN } from '../env'
 export default {
