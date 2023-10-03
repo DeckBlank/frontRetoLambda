@@ -184,9 +184,14 @@ button:hover {
 }
 
 .card {
-  margin: 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   border: 1px solid var(--color-secondary);
   border-radius: 4px;
+}
+@media (min-width: 700px) {
+  .card {
+    margin: 1rem;
+  }
 }
 </style>

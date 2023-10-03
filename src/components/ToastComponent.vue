@@ -37,9 +37,9 @@ export default defineComponent({
 
 <style scope>
 .toast {
-  position: absolute;
-  top: 50px;
-  right: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
   background-color: var(--primary-color);
@@ -47,6 +47,12 @@ export default defineComponent({
   border-radius: 5px;
   box-shadow: 0 0 10px var(--color-secondary);
   z-index: 999;
+}
+@media (min-width: 700px) {
+  .toast {
+    bottom: 80%;
+    left: 80%;
+  }
 }
 
 .success {
