@@ -1,35 +1,59 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
+@import "./base.css";
+body {
+  display: flex;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-
+}
+#app {
+  width: 100%;
   font-weight: normal;
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+#spa {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "head head"
+    "main main";
+}
+#spa > header {
+  grid-area: head;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-primary);
+}
+#spa > main {
+  grid-area: main;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .container {
+    max-width: 1400px;
+  }
+  .col-6-xl {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .row {
+    flex-direction: row;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.message {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 600;
 }

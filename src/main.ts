@@ -1,4 +1,3 @@
-import './assets/base.css'
 import './assets/main.css'
 
 import App from './App.vue'
